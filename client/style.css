@@ -1,0 +1,9 @@
+.bg-hero-gradient {
+  background: #0a0a0a;
+  background: linear-gradient(
+    163deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(94, 94, 94, 1) 50%,
+    rgba(15, 14, 14, 1) 100%
+  );
+}

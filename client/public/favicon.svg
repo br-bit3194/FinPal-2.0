@@ -1,0 +1,82 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gradient -->
+  <circle cx="16" cy="16" r="15" fill="url(#mainGradient)"/>
+  
+  <!-- Inner Glow Circle -->
+  <circle cx="16" cy="16" r="13" fill="none" stroke="url(#glowGradient)" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Central Diamond/Hexagon Shape -->
+  <path d="M 16 8 L 21 11 L 21 21 L 16 24 L 11 21 L 11 11 Z" fill="url(#diamondGradient)" opacity="0.9"/>
+  
+  <!-- Financial Graph Lines -->
+  <g stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.9">
+    <!-- Rising trend line -->
+    <path d="M 10 19 Q 13 17 16 16 Q 19 15 22 13" fill="none"/>
+    
+    <!-- Data points -->
+    <circle cx="10" cy="19" r="1" fill="white"/>
+    <circle cx="13" cy="17" r="1" fill="white"/>
+    <circle cx="16" cy="16" r="1" fill="white"/>
+    <circle cx="19" cy="15" r="1" fill="white"/>
+    <circle cx="22" cy="13" r="1" fill="white"/>
+  </g>
+  
+  <!-- Smart AI Brain Circuit Pattern -->
+  <g stroke="white" stroke-width="0.8" opacity="0.7">
+    <!-- Circuit connections -->
+    <line x1="8" y1="10" x2="11" y2="10"/>
+    <line x1="21" y1="10" x2="24" y2="10"/>
+    <line x1="8" y1="22" x2="11" y2="22"/>
+    <line x1="21" y1="22" x2="24" y2="22"/>
+    
+    <!-- Circuit nodes -->
+    <circle cx="8" cy="10" r="0.8" fill="white"/>
+    <circle cx="24" cy="10" r="0.8" fill="white"/>
+    <circle cx="8" cy="22" r="0.8" fill="white"/>
+    <circle cx="24" cy="22" r="0.8" fill="white"/>
+  </g>
+  
+  <!-- Innovation Sparkles -->
+  <g fill="white" opacity="0.8">
+    <path d="M 6 8 L 7 7 L 6 6 L 5 7 Z"/>
+    <path d="M 26 8 L 27 7 L 26 6 L 25 7 Z"/>
+    <path d="M 6 24 L 7 23 L 6 22 L 5 23 Z"/>
+    <path d="M 26 24 L 27 23 L 26 22 L 25 23 Z"/>
+  </g>
+  
+  <!-- Central FinPal "FP" Monogram -->
+  <g fill="white" font-family="Arial, sans-serif" font-size="6" font-weight="bold" text-anchor="middle">
+    <text x="16" y="18" fill="white">FP</text>
+  </g>
+  
+  <!-- Outer Ring with Tech Pattern -->
+  <circle cx="16" cy="16" r="15" fill="none" stroke="url(#outerGradient)" stroke-width="0.8" opacity="0.6"/>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <!-- Main background gradient -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="50%" stop-color="#0081A7"/>
+      <stop offset="100%" stop-color="#00B4D8"/>
+    </linearGradient>
+    
+    <!-- Diamond gradient -->
+    <linearGradient id="diamondGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0F7FA"/>
+    </linearGradient>
+    
+    <!-- Glow gradient -->
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#00B4D8"/>
+    </linearGradient>
+    
+    <!-- Outer ring gradient -->
+    <linearGradient id="outerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#0081A7"/>
+    </linearGradient>
+  </defs>
+</svg>
