@@ -13,6 +13,13 @@
 
 FinPal is a comprehensive, AI-powered finance management web application that helps users take full control of their financial life. With its intelligent features, interactive visualizations, gamified challenges, and smart AI assistant, FinPal transforms financial management into an engaging and insightful experience.
 
+## Team:
+![Team](team.jpeg)
+
+## 🎥 Demo
+[![FinPal Demo](https://img.youtube.com/vi/RmGoMQ4t064/0.jpg)](https://www.youtube.com/watch?v=RmGoMQ4t064)
+
+
 ## ✨ Core Features
 
 ### 💰 **Financial Management**
