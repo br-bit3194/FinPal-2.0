@@ -10,7 +10,7 @@ const BankStatementUpload = ({ isOpen, onClose }) => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [processingResults, setProcessingResults] = useState(null);
   const [dragActive, setDragActive] = useState(false);
-  
+
   const dispatch = useDispatch();
 
   const handleFileSelect = (file) => {
@@ -36,7 +36,7 @@ const BankStatementUpload = ({ isOpen, onClose }) => {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
-    
+
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       handleFileSelect(e.dataTransfer.files[0]);
     }
@@ -62,7 +62,7 @@ const BankStatementUpload = ({ isOpen, onClose }) => {
       formData.append('pdf', selectedFile);
 
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:3000/api/bank-statement/process', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/bank-statement/process`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -75,7 +75,7 @@ const BankStatementUpload = ({ isOpen, onClose }) => {
       if (response.ok) {
         setProcessingResults(data);
         toast.success(`Successfully processed ${data.processedCount} transactions!`);
-        
+
         // Refresh the dashboard data
         dispatch(getAllIncomes());
         dispatch(getAllExpenses());
@@ -127,13 +127,12 @@ const BankStatementUpload = ({ isOpen, onClose }) => {
               {/* File Upload Area */}
               <div className="mb-6">
                 <div
-                  className={`border-2 border-dashed rounded-xl p-8 text-center transition-colors ${
-                    dragActive
+                  className={`border-2 border-dashed rounded-xl p-8 text-center transition-colors ${dragActive
                       ? 'border-blue-500 bg-blue-50'
                       : selectedFile
-                      ? 'border-green-500 bg-green-50'
-                      : 'border-gray-300 hover:border-gray-400'
-                  }`}
+                        ? 'border-green-500 bg-green-50'
+                        : 'border-gray-300 hover:border-gray-400'
+                    }`}
                   onDragEnter={handleDrag}
                   onDragLeave={handleDrag}
                   onDragOver={handleDrag}
@@ -209,11 +208,10 @@ const BankStatementUpload = ({ isOpen, onClose }) => {
                 <button
                   onClick={processBankStatement}
                   disabled={!selectedFile || isProcessing}
-                  className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                    !selectedFile || isProcessing
+                  className={`px-6 py-3 rounded-lg font-medium transition-all ${!selectedFile || isProcessing
                       ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                       : 'bg-blue-600 text-white hover:bg-blue-700 transform hover:scale-105'
-                  }`}
+                    }`}
                 >
                   {isProcessing ? (
                     <>
@@ -269,11 +267,10 @@ const BankStatementUpload = ({ isOpen, onClose }) => {
                     {processingResults.transactions.map((txn, index) => (
                       <div
                         key={index}
-                        className={`p-3 rounded-lg border ${
-                          txn.type === 'income'
+                        className={`p-3 rounded-lg border ${txn.type === 'income'
                             ? 'bg-green-50 border-green-200'
                             : 'bg-red-50 border-red-200'
-                        }`}
+                          }`}
                       >
                         <div className="flex items-center justify-between">
                           <div>
@@ -285,11 +282,10 @@ const BankStatementUpload = ({ isOpen, onClose }) => {
                             </p>
                           </div>
                           <span
-                            className={`font-semibold ${
-                              txn.type === 'income'
+                            className={`font-semibold ${txn.type === 'income'
                                 ? 'text-green-600'
                                 : 'text-red-600'
-                            }`}
+                              }`}
                           >
                             {txn.type === 'income' ? '+' : '-'}₹{txn.data.ammount}
                           </span>

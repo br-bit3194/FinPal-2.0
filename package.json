@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server/server.js",
-    "dev": "nodemon server/server.js"
+    "dev": "nodemon server/server.js",
+    "build": "echo 'No build step for server'"
   },
   "author": "",
   "license": "ISC",
